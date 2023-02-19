@@ -6,6 +6,7 @@
 --color-footer: #E7E9FC;
 --button-hover: #404BBF;
 --button-filter-bcg: #F4F4FD;
+--color-customers: #8E8F99;
 --line-height-h-text: 1.2;
 --line-height-p-text: 1.5;
 }
@@ -48,7 +49,7 @@ ul {
     font-size: 16px;
     letter-spacing: 0.03em;
     line-height: var(--line-height-p-text);
-    padding: 24px 20px; 
+    padding: 24px 0; 
     margin: 0;
 }
 
@@ -87,17 +88,27 @@ ul {
 /*Hero*/
 
 .hero {
-    background-color: var(--color-text-primary);
+    max-width: 1440px;
+    margin: 0 auto;
     text-align: center;
-    padding: 188px 472px;
+    padding: 188px 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero .text {
     color: var(--color-white);
     font-size: 56px;
     line-height: 1.07;
+    max-width: 496px;
     letter-spacing: 0.02em;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     margin-bottom: 48px;
 }
@@ -111,6 +122,8 @@ ul {
     border-radius: 4px;
     padding: 16px 32px;
     border: none;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .button:hover,
@@ -121,8 +134,7 @@ ul {
 /*Section*/
 
 .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0;
 }
 
 .section-image {
@@ -131,7 +143,6 @@ ul {
 
 .section-team {
     background-color: var(--button-filter-bcg);
-    padding-bottom: 120px;
 }
 
 .people {
@@ -150,8 +161,7 @@ ul {
     font-weight: 500;
     font-size: 20px;
     line-height: var(--line-height-h-text);
-    margin: 0;
-    margin-bottom: 8px;
+    margin: 8px 0;
 }
 
 .descr {
@@ -179,8 +189,6 @@ ul {
     padding: 0;
     width: 264px;
     margin-top: 16px;
-    margin-right: 0;
-    
 }
 
 .footer {
@@ -188,7 +196,41 @@ ul {
     border-bottom: 1px solid var(--color-footer);
     padding-top: 100px;
     padding-bottom: 100px;
+}
 
+.footer .container {
+    display: flex;
+    gap: 120px;
+}
+
+.footer h3 {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: var(--line-height-p-text);
+    margin-bottom: 16px;
+    margin-top: 0;
+    text-align: start;
+}
+
+.footer .social-list {
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+.footer .social-list-link {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-list-link:hover,
+.footer .social-list-link:focus {
+    background-color:  #31D0AA;;
+}
+
+.footer-logo {
+    display: block;
 }
 
 /*Portfolio*/
@@ -212,6 +254,8 @@ ul {
 .filter-button:focus {
     color: var(--color-white);
     background-color: var(--button-hover);
+    border-color: var(--button-hover);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Container */
@@ -222,7 +266,7 @@ ul {
     margin: 0 auto;
 }
 
-/*Позиционирование*/
+/*Position*/
 
 .header {
     background: var(--color-white);
@@ -244,16 +288,18 @@ ul {
 .header-menu {
     display: flex;
     padding: 24px 0;
-    margin: 0;
+    margin: 0; 
+    gap: 40px;
 }
 
  .header-address {
     display: flex;
     align-items: center;
+    gap: 40px;
 }
 
 .address {
-    padding: 20px;
+    padding: 24px 0;
 }
 
 .ul-list {
@@ -263,16 +309,21 @@ ul {
     margin: 0;
 }
 
+.team-card {
+    padding: 32px 0;
+}
+
 .section-team {
     padding: 120px;
 }
 
 .people .head {
-    margin-top: 32px;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .people .descr {
-    margin-bottom: 32px;
+    margin-bottom: 8px;
 }
 
 .visually-hidden {
@@ -315,11 +366,6 @@ ul {
     margin-right: 24px;
 }
 
-.flex-element:hover,
-.flex-element:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
 .flex-element:nth-last-child(-n+3) {
     margin-bottom: 0;
 }
@@ -330,6 +376,18 @@ ul {
 
 .flex-element .head {
     margin-bottom: 8px;
+}
+
+/* .link:hover,
+.link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}   
+Сверху тень для ссылок, которая не работает, снизу тень для списка которая работает) Как сделать чтобы для ссылок работала?
+*/
+
+.flex-element:hover,
+.flex-element:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 img {
@@ -344,7 +402,57 @@ img {
     border-top: none;
 }  
 
-/* Hemework 4 */
+/* Icons */
+
+.icons-features {
+    display: block;
+    background-color: var(--button-filter-bcg);
+    border-radius: 4px;
+    padding: 24px 0;
+    align-items: center;
+    margin: 0;
+}
+
+.social-list {
+    display: flex;
+    gap: 24px;
+    padding-left: 0;
+    justify-content: center;
+}
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-brand);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    background-color: var(--button-hover);
+}
+
+.li-customers {
+    width: 168px;
+    height: 88px;
+}
+
+.link-customers {
+    display: flex;
+    fill: var(--color-customers);
+    padding: 16px 32px;
+    border: 1px solid var(--color-customers);
+    border-radius: 4px;
+}
+
+.link-customers:hover,
+.link-customers:focus {
+    fill: var(--button-hover);
+    border-color: var(--button-hover);
+} 
 
 
 
