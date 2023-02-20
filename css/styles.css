@@ -378,23 +378,11 @@ ul {
     margin-bottom: 8px;
 }
 
-/* .link:hover,
-.link:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}   
-Сверху тень для ссылок, которая не работает, снизу тень для списка которая работает) Как сделать чтобы для ссылок работала?
-*/
-
-.flex-element:hover,
-.flex-element:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
 img {
     display: block;
 }
 
-.border {
+.border-link {
     border: 1px solid var(--color-footer);
     padding-top: 32px;
     padding-bottom: 32px;
@@ -402,15 +390,21 @@ img {
     border-top: none;
 }  
 
+.border-link:hover,
+.border-link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 /* Icons */
 
 .icons-features {
-    display: block;
+    display: flex;
     background-color: var(--button-filter-bcg);
     border-radius: 4px;
-    padding: 24px 0;
+    width: 264px;
+    height: 112px;
+    justify-content: center;
     align-items: center;
-    margin: 0;
 }
 
 .social-list {
@@ -442,8 +436,11 @@ img {
 
 .link-customers {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     fill: var(--color-customers);
-    padding: 16px 32px;
     border: 1px solid var(--color-customers);
     border-radius: 4px;
 }
